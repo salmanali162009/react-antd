@@ -1,0 +1,12 @@
+export { default as Dashboard } from './Dashboard';
+export { default as SideMenu } from './layout/SideMenu';
+export { default as DashboardHeader } from './layout/DashboardHeader';
+export { default as FilterBar } from './common/FilterBar';
+export { default as AddUserModal } from './common/AddUserModal';
+export { default as ProfileDrawer } from './common/ProfileDrawer';
+export { default as StatCards } from './dashboard/StatCards';
+export { default as GoalsProgress } from './dashboard/GoalsProgress';
+export { default as QuickActions } from './dashboard/QuickActions';
+export { default as AnnouncementCarousel } from './dashboard/AnnouncementCarousel';
+export { default as TransactionsTable } from './dashboard/TransactionsTable';
+export { default as CustomerFeedback } from './dashboard/CustomerFeedback';

@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^6.3.2",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^6.5.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-scripts": "5.0.1",
@@ -24,6 +26,14 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^@rc-component/([^/]+)(/.*)?$": "<rootDir>/node_modules/@rc-component/$1/lib$2"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ant-design|@rc-component|@babel/runtime))"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,6 +44,16 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@rc-component/([a-z-]+)/locale/(.*)$": "@rc-component/$1/lib/locale/$2",
+      "^@rc-component/picker/generate/(.*)$": "@rc-component/picker/lib/generate/$1"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\](?!(@ant-design/colors)(/|$)).+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
     ]
   }
 }
